@@ -3,13 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="tests.FlightSearchTest">
+      <class name="handledropdown.BootStrapDropdown">
         <methods>
-          <include name="setUp"/>
-          <include name="teardown"/>
-          <include name="FlightSearch"/>
+          <include name="dropdownselect"/>
         </methods>
-      </class> <!-- tests.FlightSearchTest -->
+      </class> <!-- handledropdown.BootStrapDropdown -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
