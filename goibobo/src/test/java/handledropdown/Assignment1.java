@@ -33,7 +33,7 @@ public class Assignment1
 	
 	driver.get("https://www.google.com/");
 	
-	//WebDriverWait wait = new WebDriverWait(driver, 5);
+	WebDriverWait wait = new WebDriverWait(driver, 5);
     //wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//xpath_to_element")));
 	//wait.until(ExpectedConditions.elementToBeClickable(element));
 	
