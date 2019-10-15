@@ -16,7 +16,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
-
+//Getting all the links on google 
 public class Assignment1 
 {
 	WebDriver driver;
@@ -33,7 +33,7 @@ public class Assignment1
 	
 	driver.get("https://www.google.com/");
 	
-	WebDriverWait wait = new WebDriverWait(driver, 5);
+	//WebDriverWait wait = new WebDriverWait(driver, 5);
     //wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//xpath_to_element")));
 	//wait.until(ExpectedConditions.elementToBeClickable(element));
 	
