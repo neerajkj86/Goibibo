@@ -8,6 +8,7 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
@@ -25,7 +26,7 @@ public class Assignment1
 	{
 	WebDriverManager.chromedriver().setup();
 	
-	driver = new ChromeDriver();
+	driver = new FirefoxDriver();
 	
 	driver.manage().window().maximize();
 	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
