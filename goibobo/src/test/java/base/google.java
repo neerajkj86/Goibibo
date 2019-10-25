@@ -10,6 +10,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
+/**
+ * @author JainNe
+ * Here i am writing the google search logic 
+ */
 public class google {
 
 
@@ -30,7 +34,7 @@ public class google {
 				
 				driver.findElement(By.name("q")).sendKeys("Java");
 				
-				Thread.sleep(5000);
+				Thread.sleep(6000);
 				
 				try
 				{
