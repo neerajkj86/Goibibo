@@ -1,7 +1,8 @@
-package handledropdown;
+package passwordencryption;
 
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.codec.binary.Base64;
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -22,8 +23,11 @@ public class ActionClassMouseHowerDemo
 {
 	//adding comments for git
 	WebDriver driver;
+	
+	
+	
 	@Test
-	public void dropdownselection() throws Exception
+	public void passwordEncryptions() throws Exception
 	{
 	WebDriverManager.chromedriver().setup();
 	
@@ -46,22 +50,47 @@ String path =System.getProperty("user.dir");
 	//wait.until(ExpectedConditions.visibilityOfElementLocated(locator))
 	
 	driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[2]/div/form/div[1]/input")).sendKeys("9650139442");
-	driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[2]/div/form/div[2]/input")).sendKeys("Pass@12345");
+	driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[2]/div/form/div[2]/input")).sendKeys(decodeString("UGFzc0AxMjM0NQ=="));
 	driver.findElement(By.xpath("/html/body/div[2]/div/div/div/div/div[2]/div/form/div[3]/button/span")).click();
 	
 	
 	//WebElement dropdown=wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='container']/div/div[2]/div/ul/li[3]/span")));
 	
 	
-	Actions obj = new Actions(driver);
-	
-	//obj.moveToElement(dropdown).perform();
-	
 	Thread.sleep(3000);
-	driver.findElement(By.xpath("//*[@id='container']/div/div[2]/div/ul/li[3]/ul/li/ul/li[2]/ul/li[3]/a")).click();
+	
+	
+	
+	
+	
+	
 	
 	driver.close();
 	
 	
 	}
+	
+	
+	
+	
+	public static String decodeString(String Password)
+	{
+		//byte[] encodeString =Base64.encodeBase64(s.getBytes());
+		
+		byte[] decodeString=	Base64.decodeBase64(Password);
+		
+		return new String(decodeString);
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	}	

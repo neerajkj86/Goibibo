@@ -32,6 +32,7 @@ public class DropDown
 	
 	WebDriverWait wait = new WebDriverWait(driver, 20);
 
+	driver.manage().timeouts().pageLoadTimeout(1, TimeUnit.SECONDS);
 	driver.get("https://www.toptal.com/talent/apply");
 	
 	
@@ -44,7 +45,7 @@ public class DropDown
 	wait.until(ExpectedConditions.visibilityOf(abc));
 	driver.findElement(By.xpath("//*[@id='new_talent_create_applicant']/section/div/div[1]/fieldset/div[2]/div[2]/div[1]/div[1]")).click();
 	
-	Wait wait = new FluentWait<WebDriver>(driver) //Fluent Wait with polling interval
+	Wait waits = new FluentWait<WebDriver>(driver) //Fluent Wait with polling interval
 			.withTimeout(Duration.ofSeconds(10))
 			.pollingEvery(Duration.ofSeconds(2))
 			.ignoring(NoSuchElementException.class);
